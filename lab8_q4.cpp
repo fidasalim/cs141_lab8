@@ -3,19 +3,18 @@
 using namespace std;
 
 //using functions 
-//merging the arrays
-int * mergarr(int arrA[],int arrB[]){
+//merging the  arrays
+int  mergarr(int arrA[],int arrB[]){
+    int arr[10];
 	for(int i=0;i<10;i++){
-		int *p = int arr;
 		if(i<5){
-		int arr[i]=int 	arrA[i];}
+		arr[i] =int (arrA[i]);
+		}
 		if(i>4 && i<10){
-		int arr[i]=int arrB[6+i];}
+		arr[i] =int (arrB[i-5]);}
+		cout<<arr[i]<<",";
+	
 }
-
-}
-
-
 }
 
 
@@ -45,12 +44,16 @@ int func2(int arr[]){
 
 
 int main(){
-	int arrA[]={1,29,10,11,54};  
-	int arrB[]={44,3,56,2};  
-	cout<<" Our new array by merging the array is :"<<
+	int arrA[5]={1,2,10,11,5};
+	int arrB[5]={6,3,2,8,4}; 
+	cout<< "The arrA :{1,2,10,11,5}"<<endl;
+	cout<< "The arrB :{6,3,2,8,4}"<<endl;
+	cout<<"The merger array of arrA and arrB is arr : { ";
+	mergarr(arrA,arrB);
+	cout <<" }"<<endl;
+	cout<<"The maximum of the numbers in the array: "<<max(mergarr(arrA,arrB))<<endl;
+	cout<<"The minimum of the numbers in the array: "<<min(mergarr(arrA,arrB))<<endl;
 	//call for functions
-	cout<<"The maximum of the numbers in the array: "<<func1(arr)<<endl;
-	cout<<"The minimum of the numbers in the array: "<<func2(arr)<<endl;
-	cout<<"The mean of the numbers in the array: "<<func3(arr)<<endl;
+	
 	return 0;
 }
