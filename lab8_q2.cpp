@@ -56,12 +56,40 @@ void func4(int arr[]){
 	float m = (float(arr[4])/2)+(float(arr[5])/2);
 		cout<<"The median of the elements in the array is "<<m<<endl;	
 }
+
+//finding the most frequent element
+int func5(int arr[]) 
+{ 
+    // find the max frequency 
+    int max = 1, a = arr[0], pre = 1; 
+    for (int i = 1; i < 10; i++) { 
+        if (arr[i] == arr[i - 1]) 
+            pre++; 
+        else { 
+            if (pre > max) { 
+                max = pre; 
+                a = arr[i - 1]; 
+            } 
+            pre = 1; 
+        } 
+    } 
+  
+    // If last element is most frequent 
+    if (pre > max) 
+    { 
+        max = pre; 
+        a = arr[10 - 1]; 
+    } 
+   
+    return a; 
+}  
 int main(){
-	int arr[10]={1,2,10,11,5,6,3,2,8,4};  
+	int arr[10]={1,2,10,9,5,6,3,2,8,4};  
 	//call for functions
 	cout<<"The maximum of the numbers in the array: "<<func1(arr)<<endl;
 	cout<<"The minimum of the numbers in the array: "<<func2(arr)<<endl;
 	cout<<"The mean of the numbers in the array: "<<func3(arr)<<endl;
 	func4(arr);
+	cout<<"The most frequent element in the array :"<<func5(arr)<<endl;
 	return 0;
 }
