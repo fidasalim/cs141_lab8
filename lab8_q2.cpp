@@ -78,7 +78,7 @@ int func5(int arr[])
     if (pre > max) 
     { 
         max = pre; 
-        a = arr[10 - 1]; 
+        a = arr[10 - i]; 
     } 
    
     return a; 
