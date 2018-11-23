@@ -71,8 +71,8 @@ int func5(int arr[])
                 a = arr[i - 1]; 
             } 
             pre = 1; 
-        } 
-    } 
+        
+
   
     // If last element is most frequent 
     if (pre > max) 
@@ -80,7 +80,8 @@ int func5(int arr[])
         max = pre; 
         a = arr[10 - i]; 
     } 
-   
+    }
+    }
     return a; 
 }  
 int main(){
